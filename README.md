@@ -7,3 +7,7 @@ each of which can be viewed in a carousel.
 ## Features
 
 ## Technologies used
+
+## Deployed Site
+
+Check out [this site](https://matiasmiranda3092-netizen.github.io/ai-se_project_flashcards/) on GitHub Pages.
