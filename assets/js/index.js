@@ -6,31 +6,31 @@ const homeSection = document.querySelector("#home");
 const carouselSection = document.querySelector("#carousel");
 const notFoundSection = document.querySelector("#not-found");
 
-function renderDeckEl(item) {
-  const deckList = document.querySelector(".decks__list");
-  const deckEl = createDeckEl(item);
-  deckList.prepend(deckEl);
+function renderCardEl(item) {
+  const cardList = document.querySelector(".gallery__list");
+  const cardEl = createCardEl(item);
+  cardList.prepend(cardEl);
 }
 
-function createDeckEl(deckData) {
-  const template = document.querySelector("#deck-template").content;
-  const deckEl = template.querySelector(".deck").cloneNode(true);
-  deckEl.querySelector(".deck__title").textContent = deckData.name;
-  deckEl.querySelector(".deck__count").textContent =
-    `${deckData.cards.length} cards`;
-  deckEl.querySelector(".deck__link").href = `#carousel/${deckData.id}`;
+function createCardEl(cardData) {
+  const template = document.querySelector("#card-template").content;
+  const cardEl = template.querySelector(".card").cloneNode(true);
+  cardEl.querySelector(".card__title").textContent = cardData.name;
+  cardEl.querySelector(".card__count").textContent =
+    `${cardData.cards.length} cards`;
+  cardEl.querySelector(".card__link").href = `#carousel/${cardData.id}`;
 
-  const deleteBtn = deckEl.querySelector(".deck__delete-btn");
+  const deleteBtn = cardEl.querySelector(".card__delete-btn");
   deleteBtn.addEventListener("click", () => {
-    deckEl.remove();
+    cardEl.remove();
   });
 
   const colorName =
-    hexToString((deckData.color || "").toLowerCase()) || "default";
-  removeColorClasses(deckEl);
-  deckEl.classList.add(`deck_color_${colorName}`);
+    hexToString((cardData.color || "").toLowerCase()) || "default";
+  removeColorClasses(cardEl);
+  cardEl.classList.add(`card_color_${colorName}`);
 
-  return deckEl;
+  return cardEl;
 }
 
 function renderHomeView() {
@@ -71,5 +71,5 @@ window.addEventListener("DOMContentLoaded", router);
 window.addEventListener("hashchange", router);
 
 decks.forEach((item) => {
-  renderDeckEl(item);
+  renderCardEl(item);
 });
