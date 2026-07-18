@@ -73,6 +73,15 @@ function router() {
     renderNotFoundView();
   }
 }
+cancelBtnEl.addEventListener("click", () => {
+  confirmationModal.classList.remove("modal_visible");
+  currentImageEl = null;
+});
 
+confirmBtnEl.addEventListener("click", () => {
+  confirmationModal.classList.remove("modal_visible");
+  currentImageEl.remove();
+  currentImageEl = null;
+});
 window.addEventListener("DOMContentLoaded", router);
 window.addEventListener("hashchange", router);
