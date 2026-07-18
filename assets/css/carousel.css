@@ -1,0 +1,118 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 100px;
+  flex-direction: column;
+  margin-top: 46px;
+}
+
+.carousel__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #1a1a1a80;
+}
+
+.carousel__card {
+  gap: 20px;
+  background-color: #64d583;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  height: 300px;
+  width: 440px;
+  position: relative;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.carousel__card_color_white {
+  background-color: #fff;
+}
+
+.carousel__card-text {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.carousel__btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.carousel__btn_type_left,
+.carousel__btn_type_right {
+  color: #1a1a1a;
+  background-size: contain;
+  background-color: #fff;
+  height: 44px;
+  width: 44px;
+}
+
+.carousel__btn_type_left::before,
+.carousel__btn_type_right::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.carousel__btn_type_left::before {
+  background-image: url("../images/left.svg");
+}
+
+.carousel__btn_type_right::before {
+  background-image: url("../images/right.svg");
+}
+
+.carousel__btn_type_left:hover::before,
+.carousel__btn_type_right:hover::before {
+  opacity: 100%;
+}
+
+.carousel__btn_type_flip {
+  color: #1a1a1a;
+  background-size: contain;
+  background-color: #fff;
+  height: 44px;
+  width: 44px;
+  margin-top: 24px;
+}
+
+.carousel__btn_type_flip::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/flip.svg");
+  opacity: 0.5;
+}
+
+.carousel__btn_disabled {
+  opacity: 0.2;
+}
+
+.carousel__btn_disabled:hover::before {
+  opacity: 20%;
+  cursor: default;
+}
