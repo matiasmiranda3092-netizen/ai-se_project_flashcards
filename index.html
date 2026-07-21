@@ -62,39 +62,38 @@
       <section id="home" class="gallery">
         <h2 class="gallery__title">My Decks</h2>
         <div class="gallery-wrapper">
-          <ul class="gallery__list">
-            <template id="card-template">
-              <li class="card card_color_green">
-                <a class="card__link" href="#"></a>
-                <h3 class="card__title"></h3>
-                <div class="card__row">
-                  <p class="card__count"></p>
-                  <button
-                    type="button"
-                    class="card__btn card__btn_type_delete"
-                    aria-label="Delete this card"
-                  ></button>
-                </div>
-              </li>
-            </template>
-            <template id="deck-card-template">
-              <li class="card">
-                <h3 class="card__title"></h3>
-                <div class="card__row">
-                  <button
-                    class="card__btn card__btn_type_flip"
-                    type="button"
-                    aria-label="Flip card"
-                  ></button>
-                  <button
-                    type="button"
-                    aria-label="Delete card"
-                    class="card__btn card__btn_type_delete"
-                  ></button>
-                </div>
-              </li>
-            </template>
-          </ul>
+          <ul class="gallery__list"></ul>
+          <template id="card-template">
+            <li class="card card_color_green">
+              <a class="card__link" href="#"></a>
+              <h3 class="card__title"></h3>
+              <div class="card__row">
+                <p class="card__count"></p>
+                <button
+                  type="button"
+                  class="card__btn card__btn_type_delete"
+                  aria-label="Delete this card"
+                ></button>
+              </div>
+            </li>
+          </template>
+          <template id="deck-card-template">
+            <li class="card">
+              <h3 class="card__title"></h3>
+              <div class="card__row">
+                <button
+                  class="card__btn card__btn_type_flip"
+                  type="button"
+                  aria-label="Flip card"
+                ></button>
+                <button
+                  type="button"
+                  aria-label="Delete card"
+                  class="card__btn card__btn_type_delete"
+                ></button>
+              </div>
+            </li>
+          </template>
           <button type="button" class="gallery__new-card-btn">+New Deck</button>
         </div>
       </section>

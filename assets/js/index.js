@@ -1,6 +1,7 @@
 ﻿import { decks } from "./decks.js";
 import { hexToString, removeColorClasses } from "./colors.js";
 import { renderDeckView } from "./deck-view.js";
+import { renderCarouselView } from "./carousel.js";
 
 const homeSection = document.querySelector("#home");
 const deckViewSection = document.querySelector("#deck-view");
@@ -17,7 +18,7 @@ function createCardEl(cardData) {
     `${cardData.cards.length} cards`;
   cardEl.querySelector(".card__link").href = `#decks/${cardData.id}`;
 
-  const deleteBtn = cardEl.querySelector(".card__delete-btn");
+  const deleteBtn = cardEl.querySelector(".card__btn_type_delete");
   deleteBtn.addEventListener("click", () => {
     cardEl.remove();
   });
@@ -46,6 +47,22 @@ function renderHomeView() {
   notFoundSection.style.display = "none";
 }
 
+function renderDeckPage(deck) {
+  homeSection.style.display = "none";
+  deckViewSection.style.display = "block";
+  carouselSection.style.display = "none";
+  notFoundSection.style.display = "none";
+  renderDeckView(deck);
+}
+
+function renderCarouselPage(deck) {
+  homeSection.style.display = "none";
+  deckViewSection.style.display = "none";
+  carouselSection.style.display = "flex";
+  notFoundSection.style.display = "none";
+  renderCarouselView(deck);
+}
+
 function renderNotFoundView() {
   homeSection.style.display = "none";
   deckViewSection.style.display = "none";
@@ -61,12 +78,12 @@ function router() {
   if (!route || route === "home") {
     currentDeck = null;
     renderHomeView();
-  } else if (
-    (route === "deck" || route === "decks" || route === "carousel") &&
-    deck
-  ) {
+  } else if (route === "carousel" && deck) {
     currentDeck = deck;
-    renderDeckView(deck);
+    renderCarouselPage(deck);
+  } else if ((route === "deck" || route === "decks") && deck) {
+    currentDeck = deck;
+    renderDeckPage(deck);
   } else {
     currentDeck = null;
     renderNotFoundView();
@@ -86,10 +103,12 @@ function handleDeckLinkClick(event) {
 
 function handleDeckAction(event) {
   if (!currentDeck) return;
-  const target = event.target.closest(".gallery__new-card-btn");
-  if (!target) return;
 
-  window.location.hash = `#decks/${currentDeck.id}`;
+  const practiceButton = event.target.closest(".gallery__practice-btn");
+  if (practiceButton) {
+    window.location.hash = `#carousel/${currentDeck.id}`;
+    return;
+  }
 }
 
 document.body.addEventListener("click", handleDeckLinkClick);

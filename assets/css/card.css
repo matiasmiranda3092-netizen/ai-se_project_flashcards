@@ -48,6 +48,18 @@
   z-index: 2;
 }
 
+.card__btn_type_flip,
+.card__btn_type_delete {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.card__btn_type_flip:hover,
+.card__btn_type_delete:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
 .card__btn_type_flip {
   background-image: url("../images/flip.svg");
 }
@@ -86,4 +98,8 @@
 
 .card_color_grey {
   background-color: #d9d9d9;
+}
+
+.card_color_white {
+  background-color: #ffffff;
 }
