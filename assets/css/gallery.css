@@ -31,6 +31,63 @@
   flex-wrap: wrap;
 }
 
+.gallery__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.gallery__practice-btn {
+  min-width: 140px;
+  padding: 14px 24px;
+  color: #ffffff;
+  background-color: #121212;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.gallery__practice-btn:hover {
+  background-color: #333333;
+}
+
+.gallery__new-card-btn {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #1a1a1a80;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 325px;
+  height: 205px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.gallery__new-card-btn:hover {
+  background-color: #c5c5c5;
+  color: #1a1a1a;
+}
+
+.wrapping-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(325px, 100%), 353px));
+  justify-content: center;
+  gap: 18px 20px;
+}
+
+.wrapping-row__display-contents {
+  display: contents;
+}
+
 .gallery__new-card-btn {
   font-weight: 700;
   font-size: 24px;
