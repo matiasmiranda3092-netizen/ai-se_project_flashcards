@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
 }
 
 .header__title {
@@ -12,8 +13,8 @@
 
 .header__link {
   font-weight: 900;
-  font-size: 24px;
-  letter-spacing: -0.24px;
+  font-size: 20px;
+  letter-spacing: -1%;
   text-decoration: none;
   color: #1a1a1a;
   border: none;

@@ -5,10 +5,12 @@
 
 .gallery__title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   margin: 0 0 32px 0;
-  line-height: 1.2;
-  margin-bottom: 40px;
+  line-height: 100%;
+
+  margin-top: 84px;
+  margin-left: 20px;
 }
 
 .gallery__list {
@@ -66,7 +68,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  width: 325px;
+  width: 353px;
   height: 205px;
   padding: 20px;
   box-sizing: border-box;
@@ -89,13 +91,15 @@
 }
 
 #deck-view .wrapping-row {
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 #deck-view .gallery__header {
-  align-items: flex-end;
+  align-items: center;
   gap: 20px;
   margin-bottom: 32px;
 }
@@ -107,14 +111,15 @@
 }
 
 #deck-view .gallery__practice-btn {
-  min-width: 170px;
-  padding: 14px 32px;
+  min-width: 140px;
+  padding: 14px 24px;
+  margin-left: auto;
 }
 
 #deck-view .card,
 #deck-view .gallery__new-card-btn {
   width: 100%;
-  max-width: 325px;
+  max-width: 353px;
   min-height: 205px;
 }
 

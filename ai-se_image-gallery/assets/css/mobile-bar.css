@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     height: 156px;
-    background: linear-gradient(to bottom, transperent 0%, #ececec 50%);
+    background: linear-gradient(to bottom, transparent 0%, #ececec 50%);
     pointer-events: none;
     z-index: 1;
   }
