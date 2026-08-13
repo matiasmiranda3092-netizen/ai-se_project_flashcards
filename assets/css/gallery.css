@@ -116,8 +116,7 @@
   margin-left: auto;
 }
 
-#deck-view .card,
-#deck-view .gallery__new-card-btn {
+#deck-view .card {
   width: 100%;
   max-width: 353px;
   min-height: 205px;

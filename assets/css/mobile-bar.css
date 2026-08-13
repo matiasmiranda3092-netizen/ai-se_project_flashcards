@@ -22,33 +22,30 @@
   .gallery__new-card-btn,
   .gallery__practice-btn {
     position: fixed;
-    bottom: 20px;
-    z-index: 6;
-    padding: 0 20px;
-    height: 56px;
-    min-height: 56px;
+    bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 6;
+    padding: 12px 20px;
+    height: 44px;
     font-size: 18px;
     line-height: 1;
     background-color: #000;
     color: #fff;
-    border-radius: 18px;
-    font-weight: 700;
+    border-radius: 8px;
+    font-weight: 500;
     box-sizing: border-box;
   }
 
   .gallery__new-card-btn {
     width: 100%;
     max-width: 353px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    left: 60px;
   }
 
   .gallery__practice-btn {
-    left: 16px;
+    left: 240px;
     width: calc((100% - 48px) / 2);
     max-width: 170px;
   }
@@ -58,14 +55,11 @@
     width: calc((100% - 48px) / 2);
     max-width: 170px;
     margin: 0;
-    height: 56px;
-    min-height: 56px;
+    height: 44px;
     padding: 0 16px;
     line-height: 1;
     box-sizing: border-box;
-    background-color: #cccccc;
-    left: auto;
-    right: 16px;
+    background-color: #cccccccc;
   }
 
   .card {

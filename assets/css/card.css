@@ -45,7 +45,7 @@
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  z-index: 2;
+  z-index: 0;
 }
 
 .card__btn_type_flip,
