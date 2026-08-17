@@ -53,14 +53,6 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-  .carousel__btn_type_flip {
-    color: #1a1a1a;
-    background-size: contain;
-    background-color: #fff;
-    height: 44px;
-    width: 44px;
-    margin-top: 24px;
-  }
 }
 
 .carousel__btn_type_left,
@@ -94,6 +86,15 @@
 .carousel__btn_type_left:hover::before,
 .carousel__btn_type_right:hover::before {
   opacity: 100%;
+}
+
+.carousel__btn_type_flip {
+  color: #1a1a1a;
+  background-size: contain;
+  background-color: #fff;
+  height: 44px;
+  width: 44px;
+  margin-top: 24px;
 }
 
 .carousel__btn_type_flip::before {

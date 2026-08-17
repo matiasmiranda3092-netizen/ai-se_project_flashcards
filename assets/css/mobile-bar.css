@@ -89,4 +89,9 @@
     position: relative;
     left: 20px;
   }
+
+  .carousel__card {
+    width: 353px;
+    height: 420px;
+  }
 }
