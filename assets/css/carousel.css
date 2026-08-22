@@ -20,13 +20,15 @@
   border-radius: 20px;
   padding: 20px;
   align-items: center;
-  height: 300px;
-  width: 440px;
+  height: 325px;
+  width: 100%;
+  max-width: 353px;
   position: relative;
   margin-top: 32px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  grid-area: card;
 }
 
 .carousel__card_color_white {
@@ -49,14 +51,28 @@
 }
 
 .carousel__grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "card card card"
+    "left flip right";
   gap: 24px;
+  justify-items: center;
+  width: 440px;
 }
 
-.carousel__btn_type_left,
+.carousel__btn_type_left {
+  grid-area: left;
+  justify-self: center;
+  color: #1a1a1a;
+  background-size: contain;
+  background-color: #fff;
+  height: 44px;
+  width: 44px;
+}
 .carousel__btn_type_right {
+  grid-area: right;
+  justify-self: center;
   color: #1a1a1a;
   background-size: contain;
   background-color: #fff;
@@ -94,7 +110,9 @@
   background-color: #fff;
   height: 44px;
   width: 44px;
-  margin-top: 24px;
+  margin-top: 0;
+  grid-area: flip;
+  justify-self: center;
 }
 
 .carousel__btn_type_flip::before {
