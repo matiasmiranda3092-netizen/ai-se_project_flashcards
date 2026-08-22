@@ -68,6 +68,10 @@
     position: relative;
     left: 37px;
     max-width: 353px;
+    box-shadow:
+      0px 2px 8px 0px #0000001a,
+      -1px 2px 2px 0px #ffffffb2 inset,
+      1px -1px 2px 0px #00000040 inset;
   }
 
   .header__link {
@@ -93,5 +97,9 @@
   .carousel__card {
     width: 353px;
     height: 420px;
+    box-shadow:
+      0px 2px 8px 0px #0000001a,
+      -1px 2px 2px 0px #ffffffb2 inset,
+      1px -1px 2px 0px #00000040 inset;
   }
 }
