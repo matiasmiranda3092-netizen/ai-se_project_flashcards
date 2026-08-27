@@ -1,11 +1,9 @@
 ﻿import { decks } from "./decks.js";
 import { hexToString, removeColorClasses } from "./colors.js";
 import { renderDeckView } from "./deck-view.js";
-import { renderCarouselView } from "./carousel.js";
 
 const homeSection = document.querySelector("#home");
 const deckViewSection = document.querySelector("#deck-view");
-const carouselSection = document.querySelector("#carousel");
 const notFoundSection = document.querySelector("#not-found");
 
 let currentDeck = null;
@@ -43,30 +41,19 @@ function renderHomeCards() {
 function renderHomeView() {
   homeSection.style.display = "block";
   deckViewSection.style.display = "none";
-  carouselSection.style.display = "none";
   notFoundSection.style.display = "none";
 }
 
 function renderDeckPage(deck) {
   homeSection.style.display = "none";
   deckViewSection.style.display = "block";
-  carouselSection.style.display = "none";
   notFoundSection.style.display = "none";
   renderDeckView(deck);
-}
-
-function renderCarouselPage(deck) {
-  homeSection.style.display = "none";
-  deckViewSection.style.display = "none";
-  carouselSection.style.display = "flex";
-  notFoundSection.style.display = "none";
-  renderCarouselView(deck);
 }
 
 function renderNotFoundView() {
   homeSection.style.display = "none";
   deckViewSection.style.display = "none";
-  carouselSection.style.display = "none";
   notFoundSection.style.display = "flex";
 }
 
@@ -78,9 +65,6 @@ function router() {
   if (!route || route === "home") {
     currentDeck = null;
     renderHomeView();
-  } else if (route === "carousel" && deck) {
-    currentDeck = deck;
-    renderCarouselPage(deck);
   } else if ((route === "deck" || route === "decks") && deck) {
     currentDeck = deck;
     renderDeckPage(deck);
@@ -106,7 +90,7 @@ function handleDeckAction(event) {
 
   const practiceButton = event.target.closest(".gallery__practice-btn");
   if (practiceButton) {
-    window.location.hash = `#carousel/${currentDeck.id}`;
+    window.location.href = `./carousel.html?deck=${currentDeck.id}`;
     return;
   }
 }
