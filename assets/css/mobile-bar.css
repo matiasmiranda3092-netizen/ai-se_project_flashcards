@@ -39,15 +39,13 @@
   }
 
   .gallery__new-card-btn {
-    width: 100%;
+    width: calc((100% - 48px) / 1);
     max-width: 353px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px;
   }
 
   .gallery__practice-btn {
-    left: 50%;
-    transform: translateX(-50%);
+    right: 20px;
     width: calc((100% - 48px) / 2);
     max-width: 170px;
   }
@@ -80,7 +78,6 @@
   .header__link {
     position: relative;
     bottom: 8px;
-    left: 20px;
   }
 
   .card__btn_type_delete {
@@ -94,7 +91,6 @@
 
   .gallery__title {
     position: relative;
-    left: 20px;
   }
 
   .carousel__card {
