@@ -41,11 +41,13 @@
   .gallery__new-card-btn {
     width: 100%;
     max-width: 353px;
-    left: 60px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .gallery__practice-btn {
-    left: 240px;
+    left: 50%;
+    transform: translateX(-50%);
     width: calc((100% - 48px) / 2);
     max-width: 170px;
   }
@@ -66,7 +68,8 @@
     width: 100%;
     aspect-ratio: auto;
     position: relative;
-    left: 37px;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 353px;
     box-shadow:
       0px 2px 8px 0px #0000001a,
