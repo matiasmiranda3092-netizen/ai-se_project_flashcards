@@ -20,9 +20,8 @@
   border-radius: 20px;
   padding: 20px;
   align-items: center;
-  height: 325px;
-  width: 100%;
-  max-width: 353px;
+  height: 300px;
+  width: 440px;
   position: relative;
   margin-top: 32px;
   display: flex;
@@ -55,19 +54,15 @@
 }
 
 .carousel__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "card card card"
-    "left flip right";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
   gap: 24px;
-  justify-items: center;
-  width: 440px;
+  padding-bottom: 60px;
 }
 
 .carousel__btn_type_left {
-  grid-area: left;
-  justify-self: center;
   color: #1a1a1a;
   background-size: contain;
   background-color: #fff;
@@ -75,8 +70,6 @@
   width: 44px;
 }
 .carousel__btn_type_right {
-  grid-area: right;
-  justify-self: center;
   color: #1a1a1a;
   background-size: contain;
   background-color: #fff;
@@ -109,14 +102,16 @@
 }
 
 .carousel__btn_type_flip {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   color: #1a1a1a;
   background-size: contain;
   background-color: #fff;
   height: 44px;
   width: 44px;
   margin-top: 0;
-  grid-area: flip;
-  justify-self: center;
 }
 
 .carousel__btn_type_flip::before {
@@ -137,10 +132,4 @@
 .carousel__btn_disabled:hover::before {
   opacity: 20%;
   cursor: default;
-}
-
-@media screen and (max-width: 440px) {
-  .carousel__grid {
-    width: 353px;
-  }
 }

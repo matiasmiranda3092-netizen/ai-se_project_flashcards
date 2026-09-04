@@ -94,11 +94,32 @@
   }
 
   .carousel__card {
+    justify-self: center;
     width: 353px;
     height: 420px;
     box-shadow:
       0px 2px 8px 0px #0000001a,
       -1px 2px 2px 0px #ffffffb2 inset,
       1px -1px 2px 0px #00000040 inset;
+  }
+  .carousel__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "card card card"
+      "left flip right";
+    width: 353px;
+  }
+  .carousel__btn_type_left {
+    grid-area: left;
+    justify-self: center;
+  }
+  .carousel__btn_type_flip {
+    grid-area: flip;
+    justify-self: center;
+  }
+  .carousel__btn_type_right {
+    grid-area: right;
+    justify-self: center;
   }
 }
