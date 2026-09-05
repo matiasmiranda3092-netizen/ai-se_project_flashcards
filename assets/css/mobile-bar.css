@@ -87,6 +87,7 @@
   .footer__text {
     position: fixed;
     z-index: 10;
+    left: 2px;
   }
 
   .gallery__title {
@@ -112,7 +113,7 @@
   }
   .carousel__btn_type_left {
     grid-area: left;
-    justify-self: center;
+    justify-self: start;
   }
   .carousel__btn_type_flip {
     grid-area: flip;
@@ -120,6 +121,6 @@
   }
   .carousel__btn_type_right {
     grid-area: right;
-    justify-self: center;
+    justify-self: end;
   }
 }
